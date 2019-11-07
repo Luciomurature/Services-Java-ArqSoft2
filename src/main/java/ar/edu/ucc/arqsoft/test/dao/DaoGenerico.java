@@ -3,7 +3,7 @@ package ar.edu.ucc.arqsoft.test.dao;
 import java.io.Serializable;
 import java.util.List;
 
-public interface DaoGenerico<E, ID extends Serializable> {
+public interface DaoGenerico<E, ID extends Serializable>{
 	
 	public void insert(E entity);
 	

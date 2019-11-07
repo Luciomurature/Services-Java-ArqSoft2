@@ -11,7 +11,7 @@
 		<property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
 		
 		<!-- CHANGE THE DATABASE CONNECTION-->
-		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/ARQSOFT_2019?useSSL=false"/>		
+		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/proyectoArqSoft?useSSL=false"/>
 		<property name="user" value="root" />
 		<property name="password" value="root" />
 		
@@ -32,19 +32,19 @@
 		<property name="breakAfterAcquireFailure" value="false" />
 	</bean>
 
-	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">		
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="packagesToScan" value="ar.edu.ucc.arqsoft.test.model" />
-		
+
 		<property name="dataSource">
 			<ref bean="recordDataSource" />
 		</property>
-		
+
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
 				<prop key="hibernate.connection.isolation">2</prop>
 				<prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop>
-				
+
 				<prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>
